@@ -26,6 +26,7 @@ class User_model extends CI_Model {
 
     // Fetch all users
     public function get_all_users() {
+<<<<<<< HEAD
         return $this->db->get('users')->result();
     }
 
@@ -35,5 +36,8 @@ class User_model extends CI_Model {
         $query = $this->db->get('users');
 
         return $query->num_rows() > 0;
+=======
+        return $this->db->get('users')->result();  // Fetch all users from the 'users' table
+>>>>>>> ce2787aded8ed07cc86d71b4ac74af7a59be57fd
     }
 }

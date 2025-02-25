@@ -1,5 +1,6 @@
 /* General Styles */
 body {
+<<<<<<< HEAD
     font-family: 'Century Gothic', sans-serif;
     background-color: #f4f4f4;
     color: #2e7d32;
@@ -123,11 +124,41 @@ label {
     margin-bottom: 5px;
     color: #2e7d32;
     text-align: left;
+=======
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #2e7d32;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 0;
+>>>>>>> ce2787aded8ed07cc86d71b4ac74af7a59be57fd
 }
 
 /* Form Fields */
 input[type="text"], input[type="email"], input[type="password"] {
     width: 100%;
+<<<<<<< HEAD
     padding: 14px;
     margin: 8px 0;
     border: 1px solid #ccc;
@@ -136,10 +167,18 @@ input[type="text"], input[type="email"], input[type="password"] {
     font-size: 16px;
     transition: all 0.3s ease-in-out;
     display: block;
+=======
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #66bb6a;
+    border-radius: 4px;
+    box-sizing: border-box;
+>>>>>>> ce2787aded8ed07cc86d71b4ac74af7a59be57fd
 }
 
 input:focus {
     outline: none;
+<<<<<<< HEAD
     border-color: #1b5e20;
     box-shadow: 0 0 6px rgba(27, 94, 32, 0.5);
 }
@@ -154,10 +193,17 @@ input:focus {
 }
 
 /* Submit Button */
+=======
+    border-color: #2e7d32;
+    box-shadow: 0 0 5px #66bb6a;
+}
+
+>>>>>>> ce2787aded8ed07cc86d71b4ac74af7a59be57fd
 button {
     background: #2e7d32;
     color: white;
     border: none;
+<<<<<<< HEAD
     padding: 14px;
     width: 100%;
     border-radius: 6px;
@@ -171,15 +217,35 @@ button {
 button:hover {
     background: #43a047;
     transform: scale(1.05);
+=======
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #1b5e20;
+>>>>>>> ce2787aded8ed07cc86d71b4ac74af7a59be57fd
 }
 
 /* Messages */
 .message {
+<<<<<<< HEAD
     padding: 14px;
     margin-bottom: 15px;
     border-radius: 6px;
     font-weight: bold;
     text-align: center;
+=======
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+>>>>>>> ce2787aded8ed07cc86d71b4ac74af7a59be57fd
 }
 
 .success {
@@ -193,3 +259,90 @@ button:hover {
     color: #b71c1c;
     border: 1px solid #d32f2f;
 }
+<<<<<<< HEAD
+=======
+
+.warning {
+    background-color: #fff8e1;
+    color: #f57f17;
+    border: 1px solid #ffb300;
+}
+
+/* Links */
+a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #1b5e20;
+}
+
+/* Dashboard Table Styles */
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #2e7d32;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f8e9;
+}
+
+tr:hover {
+    background-color: #c8e6c9;
+}
+
+td {
+    color: #333;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    color: #2e7d32;
+}
+
+/* Logout Button */
+.logout-btn {
+    background: #c62828;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    background: #b71c1c;
+}
+>>>>>>> ce2787aded8ed07cc86d71b4ac74af7a59be57fd
