@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.css'); ?>">
 </head>
 <body>
     <h2>Register</h2>
 
     <!-- Success/Error messages -->
     <?php if ($this->session->flashdata('success')): ?>
-        <div style="color: green;"><?= $this->session->flashdata('success'); ?></div>
+        <div class="success message"><?= $this->session->flashdata('success'); ?></div>
     <?php endif; ?>
     <?php if ($this->session->flashdata('error')): ?>
-        <div style="color: red;"><?= $this->session->flashdata('error'); ?></div>
+        <div class="error message"><?= $this->session->flashdata('error'); ?></div>
     <?php endif; ?>
 
-    <?php echo validation_errors(); // Display form validation errors ?>
+    <?php echo validation_errors('<div class="error message">', '</div>'); ?>
 
     <?php echo form_open('auth/register'); ?>
         <div>

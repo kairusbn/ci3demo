@@ -53,6 +53,6 @@ $route['default_controller'] = 'auth/login'; // Redirect to login page if no URL
 $route['auth/login'] = 'auth/login';
 $route['auth/register'] = 'auth/register';
 $route['auth/logout'] = 'auth/logout';
-$route['dashboard'] = 'dashboard'; // Make sure you have a dashboard controller or page
+$route['dashboard'] = 'dashboard/index'; // Make sure you have a dashboard controller or page
 
 
