@@ -8,22 +8,15 @@ class Auth extends CI_Controller {
         $this->load->model('User_model');
         $this->load->helper(['form', 'url']);
         $this->load->library(['form_validation', 'session']);
-<<<<<<< HEAD
-=======
-        $this->load->database(); // Ensure the database is loaded
->>>>>>> ce2787aded8ed07cc86d71b4ac74af7a59be57fd
     }
 
     // Register User
     public function register() {
-<<<<<<< HEAD
         if ($this->session->userdata('user_id')) {
             redirect('dashboard'); // Prevent access if already logged in
             return;
         }
 
-=======
->>>>>>> ce2787aded8ed07cc86d71b4ac74af7a59be57fd
         $this->form_validation->set_rules('username', 'Username', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email|trim');
         $this->form_validation->set_rules('password', 'Password', 'required|min_length[6]');
@@ -32,7 +25,6 @@ class Auth extends CI_Controller {
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('register');
         } else {
-<<<<<<< HEAD
             $username = $this->input->post('username', TRUE);
             $email = $this->input->post('email', TRUE);
 
@@ -53,11 +45,6 @@ class Auth extends CI_Controller {
             $data = [
                 'username' => $username,
                 'email' => $email,
-=======
-            $data = [
-                'username' => $this->input->post('username', TRUE),
-                'email' => $this->input->post('email', TRUE),
->>>>>>> ce2787aded8ed07cc86d71b4ac74af7a59be57fd
                 'password' => password_hash($this->input->post('password'), PASSWORD_BCRYPT)
             ];
 
@@ -73,14 +60,11 @@ class Auth extends CI_Controller {
 
     // Login User
     public function login() {
-<<<<<<< HEAD
         if ($this->session->userdata('user_id')) {
             redirect('dashboard'); 
             return;
         }
 
-=======
->>>>>>> ce2787aded8ed07cc86d71b4ac74af7a59be57fd
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email|trim');
         $this->form_validation->set_rules('password', 'Password', 'required');
 
@@ -108,7 +92,6 @@ class Auth extends CI_Controller {
         $this->session->sess_destroy();
         redirect('auth/login');
     }
-<<<<<<< HEAD
 
     // Check if username exists (AJAX)
     public function check_username() {
@@ -131,6 +114,4 @@ class Auth extends CI_Controller {
         $exists = $this->User_model->check_exists('email', $email);
         echo $exists ? "exists" : "available";
     }
-=======
->>>>>>> ce2787aded8ed07cc86d71b4ac74af7a59be57fd
 }
