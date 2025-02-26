@@ -11,18 +11,23 @@
     <script src="<?php echo base_url('assets/js/validate.js'); ?>"></script>  <!-- Your custom validation script -->
 </head>
 <body>
-    <div class="login-container">  <!-- Added the container -->
+    <div class="login-container">
         <h2>Login</h2>
 
-        <!-- Success/Error messages -->
+        <!-- Success Message -->
         <?php if ($this->session->flashdata('success')): ?>
-            <div style="color: green;"><?= $this->session->flashdata('success'); ?></div>
-        <?php endif; ?>
-        <?php if ($this->session->flashdata('error')): ?>
-            <div style="color: red;"><?= $this->session->flashdata('error'); ?></div>
+            <div class="message success"><?= $this->session->flashdata('success'); ?></div>
         <?php endif; ?>
 
-        <?php echo validation_errors(); // Display form validation errors ?>
+        <!-- Error Message -->
+        <?php if ($this->session->flashdata('error')): ?>
+            <div class="message error"><?= $this->session->flashdata('error'); ?></div>
+        <?php endif; ?>
+
+        <!-- Validation Errors -->
+        <?php if (validation_errors()): ?>
+            <div class="message error"><?= validation_errors(); ?></div>
+        <?php endif; ?>
 
         <?php echo form_open('auth/login', ['id' => 'login-form']); ?>
             <div>
@@ -39,15 +44,15 @@
         </form>
 
         <p>Don't have an account? <a href="<?= site_url('auth/register'); ?>">Register here</a></p>
-    </div>  <!-- Close the container -->
-    <script>
-    console.log("Checking jQuery...");
-    if (typeof jQuery !== "undefined") {
-        console.log("✅ jQuery is loaded:", jQuery.fn.jquery);
-    } else {
-        console.log("❌ jQuery is NOT loaded!");
-    }
-</script>
+    </div>
 
+    <script>
+        console.log("Checking jQuery...");
+        if (typeof jQuery !== "undefined") {
+            console.log("✅ jQuery is loaded:", jQuery.fn.jquery);
+        } else {
+            console.log("❌ jQuery is NOT loaded!");
+        }
+    </script>
 </body>
-</html>  
+</html>

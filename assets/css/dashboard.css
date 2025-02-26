@@ -1,0 +1,184 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header Styles */
+.dashboard-header {
+    background-color: #2d7a2d;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.welcome-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logout-btn {
+    background-color: white;
+    color: #2d7a2d;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #1e5a1e;
+    color: white;
+}
+
+/* Table Container */
+.table-container {
+    width: 85%;
+    margin: 80px auto 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+/* DataTable Styles */
+#userTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+#userTable thead {
+    background-color: #2d7a2d;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+#userTable th, #userTable td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#userTable tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Adjustments for spacing */
+.dataTables_wrapper {
+    margin-bottom: 15px;
+}
+
+.dataTables_length, .dataTables_filter {
+    margin-bottom: 10px;
+}
+
+/* Action Button Styles */
+.action-btn-container {
+    display: flex;
+    gap: 5px;
+}
+
+.action-btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.edit-btn {
+    background-color: #ff9800;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #e68900;
+}
+
+.delete-btn {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #b71c1c;
+}
+
+/* Modal Styles */
+#editModal {
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#editModal div {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Field inside Modal */
+#editModal input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Buttons inside Modal */
+#editModal button {
+    margin: 5px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#editModal button:first-child {
+    background: #4caf50;
+    color: white;
+}
+
+#editModal button:first-child:hover {
+    background: #388e3c;
+}
+
+#editModal button:last-child {
+    background: #757575;
+    color: white;
+}
+
+#editModal button:last-child:hover {
+    background: #616161;
+}
