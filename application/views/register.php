@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="<?= base_url('assets/css/styles.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/auth.css'); ?>">
 
     <script src="<?= base_url('assets/js/jquery.min.js'); ?>"></script>
     <script src="<?= base_url('assets/js/jquery.validate.min.js'); ?>"></script>
 </head>
 <body>
-    <div class="register-container">
+<div class="container">
+    <div class="auth-container">
         <h2>Register</h2>
 
         <?php if ($this->session->flashdata('success')): ?>

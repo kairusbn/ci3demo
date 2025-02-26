@@ -3,13 +3,13 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
+    background-color: #e8f5e9; /* Light Green Background */
+    color: #2c6b2f; /* Dark Green Text */
 }
 
 /* Header Styles */
 .dashboard-header {
-    background-color: #2d7a2d;
+    background-color: #388E3C; /* Green Theme */
     color: white;
     padding: 15px 25px;
     display: flex;
@@ -25,8 +25,8 @@ body {
 }
 
 .logout-btn {
-    background-color: white;
-    color: #2d7a2d;
+    background-color: #c01515; /* Red for logout */
+    color: white;
     padding: 8px 12px;
     text-decoration: none;
     border-radius: 6px;
@@ -37,8 +37,7 @@ body {
 }
 
 .logout-btn:hover {
-    background-color: #1e5a1e;
-    color: white;
+    background-color: #b71c1c; /* Darker Red */
 }
 
 /* Table Container */
@@ -60,7 +59,7 @@ body {
 }
 
 #userTable thead {
-    background-color: #2d7a2d;
+    background-color: #388E3C; /* Green */
     color: white;
     text-transform: uppercase;
     font-size: 13px;
@@ -73,7 +72,7 @@ body {
 }
 
 #userTable tbody tr:hover {
-    background-color: #f1f1f1;
+    background-color: #c8e6c9; /* Light Green */
 }
 
 /* Adjustments for spacing */
@@ -102,21 +101,21 @@ body {
 }
 
 .edit-btn {
-    background-color: #ff9800;
+    background-color: #81c784; /* Light Green */
     color: white;
 }
 
 .edit-btn:hover {
-    background-color: #e68900;
+    background-color: #66bb6a; /* Darker Green */
 }
 
 .delete-btn {
-    background-color: #d32f2f;
+    background-color: #D32F2F; /* Red */
     color: white;
 }
 
 .delete-btn:hover {
-    background-color: #b71c1c;
+    background-color: #B71C1C; /* Darker Red */
 }
 
 /* Modal Styles */
@@ -166,19 +165,20 @@ body {
 }
 
 #editModal button:first-child {
-    background: #4caf50;
+    background: #388E3C; /* Green */
     color: white;
 }
 
 #editModal button:first-child:hover {
-    background: #388e3c;
+    background: #66bb6a; /* Darker Green */
 }
 
+/*Cancel Button*/
 #editModal button:last-child {
-    background: #757575;
+    background: #ec0202; /* Red */
     color: white;
 }
 
 #editModal button:last-child:hover {
-    background: #616161;
+    background: #f40404;
 }

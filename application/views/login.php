@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/auth.css'); ?>">
 
     <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/jquery.validate.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/validate.js'); ?>"></script>  <!-- Your custom validation script -->
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
+<div class="container">
+    <div class="auth-container">
+                <h2>Login</h2>
 
         <!-- Success Message -->
         <?php if ($this->session->flashdata('success')): ?>
@@ -44,7 +45,6 @@
         </form>
 
         <p>Don't have an account? <a href="<?= site_url('auth/register'); ?>">Register here</a></p>
-    </div>
 
     <script>
         console.log("Checking jQuery...");

@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e8f5e9; /* Light greenish-white */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Centering Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Form Container */
+.auth-container {
+    background: #FFFFFF; /* White */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid #C8E6C9; /* Soft green border */
+}
+
+/* Form Fields */
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    background: #C8E6C9; /* Soft matte green */
+    border: 1px solid #66BB6A; /* Matte green border */
+    border-radius: 5px;
+    color: #333;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #388E3C; /* Deep green focus */
+    box-shadow: 0 0 5px rgba(56, 142, 60, 0.5);
+}
+
+/* Submit Button */
+button {
+    background: #66BB6A; /* Matte green */
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background: #388E3C; /* Darker matte green */
+    transform: scale(1.05);
+}
+
+/* Messages */
+.message {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.success {
+    background-color: #C8E6C9; /* Soft green success */
+    color: #1B5E20;
+    border: 1px solid #66BB6A;
+}
+
+.error {
+    background-color: #FFEBEE; /* Light red */
+    color: #B71C1C;
+    border: 1px solid #D32F2F;
+}
+
+.error-message {
+    display: block;
+    color: #B71C1C; /* Matte red for errors */
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+input.error {
+    border: 1px solid #B71C1C;
+    background-color: #FFE6E6;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .auth-container {
+        width: 90%;
+    }
+}
