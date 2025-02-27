@@ -77,19 +77,22 @@ class Auth extends CI_Controller {
             $user = $this->User_model->login($email, $password);
 
             if ($user) {
-                $this->session->set_userdata(['user_id' => $user->id, 'username' => $user->username]);
+                $this->session->set_userdata([
+                    'user_id' => $user->id,
+                    'username' => $user->username
+                ]);
                 redirect('dashboard');
             } else {
                 $this->session->set_flashdata('error', 'Invalid email or password.');
-                $this->load->view('login');
+                redirect('auth/login');
             }
         }
     }
 
-    // Logout User
+    // Logout User (Properly destroy session)
     public function logout() {
         $this->session->unset_userdata(['user_id', 'username']);
-        $this->session->sess_destroy();
+        $this->session->sess_destroy(); // Ensures session is fully cleared
         redirect('auth/login');
     }
 

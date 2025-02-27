@@ -10,8 +10,7 @@
     <script src="<?= base_url('assets/js/jquery.validate.min.js'); ?>"></script>
 </head>
 <body>
-<div class="container">
-    <div class="auth-container">
+    <div class="register-container">
         <h2>Register</h2>
 
         <?php if ($this->session->flashdata('success')): ?>
