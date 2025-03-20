@@ -54,5 +54,5 @@ $route['auth/login'] = 'auth/login';
 $route['auth/register'] = 'auth/register';
 $route['auth/logout'] = 'auth/logout';
 $route['dashboard'] = 'dashboard/index'; // Make sure you have a dashboard controller or page
-
+$route['swagger'] = 'Swagger/index';
 

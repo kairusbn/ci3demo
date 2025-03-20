@@ -1,0 +1,220 @@
+{
+    "openapi": "3.0.0",
+    "paths": {
+        "/api/v1/users": {
+            "get": {
+                "tags": [
+                    "Registration"
+                ],
+                "summary": "Access the registration form",
+                "operationId": "UserController::registerForm",
+                "responses": {
+                    "200": {
+                        "description": "Registration form HTML"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Registration"
+                ],
+                "summary": "Register a new user",
+                "operationId": "UserController::register",
+                "requestBody": {
+                    "description": "Registration form data (username, email, password, confirm_password)",
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Registration successful. Redirects to login."
+                    },
+                    "400": {
+                        "description": "Validation errors or registration failed."
+                    },
+                    "409": {
+                        "description": "Username or email already exists."
+                    },
+                    "302": {
+                        "description": "Redirect to dashboard if user is already logged in."
+                    }
+                }
+            }
+        },
+        "/api/v1/users/id/": {
+            "get": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Access the login form",
+                "operationId": "UserController::loginForm",
+                "responses": {
+                    "200": {
+                        "description": "Login form HTML"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Authenticate user and log in",
+                "operationId": "UserController::login",
+                "requestBody": {
+                    "description": "Login form data (email, password)",
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Login successful. Redirects to dashboard."
+                    },
+                    "401": {
+                        "description": "Invalid credentials."
+                    },
+                    "400": {
+                        "description": "Validation errors or login failed."
+                    }
+                }
+            }
+        },
+        "/api/v1/users/{user}": {
+            "post": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Logout user",
+                "operationId": "UserController::logout",
+                "responses": {
+                    "302": {
+                        "description": "Redirects to login page after logout."
+                    }
+                }
+            }
+        },
+        "/api/v1/users/username": {
+            "post": {
+                "tags": [
+                    "Registration"
+                ],
+                "summary": "Check if username exists",
+                "operationId": "UserController::check_username",
+                "requestBody": {
+                    "description": "Username to check",
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Username status: 'exists', 'available', or 'invalid'."
+                    }
+                }
+            }
+        },
+        "/api/v1/users/email": {
+            "post": {
+                "tags": [
+                    "Registration"
+                ],
+                "summary": "Check if email exists",
+                "operationId": "UserController::check_email",
+                "requestBody": {
+                    "description": "Email to check",
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Email status: 'exists', 'available', or 'invalid'."
+                    }
+                }
+            }
+        },
+    "/api/v1/users/{users}": {
+        "patch": {
+            "tags": [
+                "Update"
+            ],
+            "summary": "Update user username and email",
+            "operationId": "UserController::edit_user",
+            "requestBody": {
+                "description": "User ID, new username, and new email",
+                "required": true
+            },
+            "responses": {
+                "200": {
+                    "description": "User update status (success or error) in JSON format."
+                }
+            }
+        }
+    },
+    "/api/v1/users/id": {
+        "delete": {
+            "tags": [
+                "Delete"
+            ],
+            "summary": "Delete user",
+            "operationId": "UserController::delete_user",
+            "requestBody": {
+                "description": "User ID to delete",
+                "required": true
+            },
+            "responses": {
+                "200": {
+                    "description": "User deletion status (success or error) in JSON format."
+                }
+            }
+        }
+    },
+        "/api/v1/users/password": {
+            "patch": {
+                "tags": [
+                    "Update"
+                ],
+                "summary": "Change user password",
+                "operationId": "UserController::change_password",
+                "requestBody": {
+                    "description": "User ID, current password, new password, and confirm password",
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Password change status (success or error) in JSON format."
+                    }
+                }
+            }
+        }
+    },
+        "components": {
+        "schemas": {
+            "User": {
+                "title": "User model",
+                "description": "User model",
+                "properties": {
+                    "id": {
+                        "title": "User ID",
+                        "description": "User ID",
+                        "type": "integer"
+                    },
+                    "username": {
+                        "title": "Username",
+                        "description": "Username",
+                        "type": "string"
+                    },
+                    "email": {
+                        "title": "Email",
+                        "description": "Email",
+                        "type": "string"
+                    },
+                    "password": {
+                        "title": "Password",
+                        "description": "Password",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "title": "Timestamp",
+                        "description": "Timestamp",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    }
+}
